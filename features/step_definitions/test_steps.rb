@@ -23,12 +23,12 @@ Then(/^Запоминаем значение из поля "(.*)"$/) do |el|
     puts $field
 end
 
-And(/^Проверяем наличие последнее созраненное значение$/) do
+And(/^Проверяем наличие последнее соxраненное значение$/) do
     el = @driver.find_element(xpath: "//*[text() = '" + $field + "']")
     el if el && el.displayed?
 end
 
-When(/^Переходим на текущую вкладку$/) do
+When(/^Переходим на последнюю вкладку$/) do
     @driver.switch_to.window(@driver.window_handles.last)
 end
 
